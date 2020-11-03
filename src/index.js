@@ -63,15 +63,16 @@ ReactDOM.render(<App />, document.getElementById("root"));
 // import HomePage from "./pages/homePage";
 
 // const sample = {
+  //image.tmdb.org/t/p/w300_and_h450_bestv2/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg 1x, //image.tmdb.org/t/p/w600_and_h900_bestv2/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg 2x
 //   adult: false,
 //   backdrop_path: "/5Iw7zQTHVRBOYpA0V6z0yypOPZh.jpg",
 //   belongs_to_collection: {
 //     id: 10,
-//     name: "Star Wars Collection",
+//     name: "Joker",
 //     poster_path: "/iTQHKziZy9pAAY4hHEDCGPaOvFC.jpg",
 //     backdrop_path: "/d8duYyyC9J5T825Hg7grmaabfxQ.jpg"
 //   },
-//   budget: 200000000,
+//   budget: $55,000,000.00,
 //   genres: [
 //     {
 //       id: 14,
@@ -79,15 +80,15 @@ ReactDOM.render(<App />, document.getElementById("root"));
 //     },
 //     {
 //       id: 12,
-//       name: "Adventure"
+//       name: "Crime"
 //     },
 //     {
 //       id: 878,
-//       name: "Science Fiction"
+//       name: "Thriller"
 //     },
 //     {
 //       id: 28,
-//       name: "Action"
+//       name: "Drama"
 //     }
 //   ],
 //   homepage:
@@ -127,7 +128,7 @@ ReactDOM.render(<App />, document.getElementById("root"));
 //     }
 //   ],
 //   release_date: "2017-12-13",
-//   revenue: 1332459537,
+//   revenue: $1,074,251,311.00,
 //   runtime: 152,
 //   spoken_languages: [
 //     {

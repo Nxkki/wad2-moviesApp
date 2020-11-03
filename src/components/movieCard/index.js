@@ -4,7 +4,7 @@ import "./movieCard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../globals/fontawesome.js";
 
-const MovieCard = props => {
+const MovieCard = (props) => {
   // movie app2 part 4
   const handleAddToFavorites = e => {
     e.preventDefault()
