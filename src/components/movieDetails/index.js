@@ -22,7 +22,7 @@ export default ({ movie }) => {
       </ul>
 
       <ul className="list-group list-group-horizontal">
-        <li key="gh" className="list-group-item list-group-item-dark">
+         <li key="gh" className="list-group-item list-group-item-dark">
           Genres
         </li>
         {movie.genres.map(g => (
