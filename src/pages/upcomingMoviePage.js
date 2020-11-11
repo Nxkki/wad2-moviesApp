@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import StubAPI from "../api/stubAPI";
 import PageTemplate from "../components/templateMovieListPage";
 import { getMovies } from "../api/tmdb-api";
+// import useMovie from "../hooks/useMovie";
 
 const MovieListPage = () => {
 

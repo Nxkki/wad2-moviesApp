@@ -1,6 +1,6 @@
-import React from "react";
-import Movie from "../movieCard/";
-import "./movieList.css";
+// import React from "react";
+// import Movie from "../movieCard/";
+// import "./movieList.css";
 
 // const MovieList = props => {
 //   const movieCards = props.movies.map(m => (
@@ -9,9 +9,14 @@ import "./movieList.css";
 //   return <div className="row movies bg-info">{movieCards}</div>;
 // };
 // movie app2 part 4
-const MovieList = props => {
-  const movieCards = props.movies.map(m => (
-    <Movie key={m.id} movie={m} buttonHandler={props.buttonHandler} />
+
+import React from "react";
+import Movie from "../movieCard/";
+import "./movieList.css";
+
+const MovieList = ({movies, action}) => {
+  const movieCards = movies.map(m => (
+    <Movie key={m.id} movie={m} action={action} />
   ));
   return <div className="row movies bg-info">{movieCards}</div>;
 };
