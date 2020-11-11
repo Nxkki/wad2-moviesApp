@@ -5,18 +5,20 @@ import AddToFavoritesButton from '../components/buttons/addToFavorites'
 
 const MovieListPage = () => {
   const context = useContext(MoviesContext);
+  const movies = context.movies.filter((m) => {  // New
+    return !("favorite" in m);
+  });
 
   return (
-      <PageTemplate 
-        title='No. Movies'
-        movies={context.movies}
-        action={(movie) => {
-          return <AddToFavoritesButton movie={movie} /> 
-        }}
-      />
+    <PageTemplate
+      title="No. Movies"
+      movies={movies}  /* Changed */
+      action={(movie) => {
+        return <AddToFavoritesButton movie={movie} />;
+      }}
+    />
   );
 };
-
 export default MovieListPage;
 // import React, { useState, useEffect } from "react";
 // import StubAPI from "../api/stubAPI";

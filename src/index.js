@@ -1,3 +1,4 @@
+import AddMovieReviewPage from './pages/addMovieReviewPage'
 import MoviesContextProvider from "./contexts/moviesContext";
 import GenresContextProvider from "./contexts/genresContext";
 import SiteHeader from './components/siteHeader'
@@ -40,6 +41,7 @@ const App = () => {
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>
            <Switch>
+          <Route exact path="/reviews/form" component={AddMovieReviewPage} />
           <Route path="/reviews/:id" component={MovieReviewPage} />
           <Route exact path="/movies/upcoming" component={UpcomingMoviePage}/>     
           <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
