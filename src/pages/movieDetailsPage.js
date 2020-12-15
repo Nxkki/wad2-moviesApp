@@ -5,6 +5,7 @@ import PageTemplate from "../components/templateMoviePage";
 import MovieReviews from "../components/movieReviews";
 import useMovie from "../hooks/useMovie";
 import SimilarMovies from "../components/movieSimilar/index.js"
+import Recommendations from "../components/movieRecommendations/index.js"
 
 
 //mp3p4
@@ -56,6 +57,7 @@ const MoviePage = props => {
           render={props => <MovieReviews movie={movie} {...props} />}
         />
         <SimilarMovies movie={movie} />
+        <Recommendations movie={movie} />
       </>
     ) : (
       <p>Waiting for movie details</p>
