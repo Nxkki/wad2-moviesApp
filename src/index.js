@@ -13,7 +13,10 @@ import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom" 
 import FavoriteMoviesPage from './pages/favoritesMoviesPage'       // NEW
 import UpcomingMoviePage from './pages/upcomingMoviePage'
 import WatchListMoviePage from './pages/watchListMoviePage'
-//m3p5
+import TopRatedMoviesPage from './pages/TopRatedMoviesPage'
+// import TopRatedMoviesContextProvider from "./contexts/topRatedMoviesContext";
+// import topRatedMoviesPage from "./pages/topRatedMoviesPage";
+// //m3p5
 // const App = () => {
 //   return (
 //     <BrowserRouter>
@@ -42,6 +45,7 @@ const App = () => {
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>
            <Switch> 
+              <Route path="/movies/topRated" component={TopRatedMoviesPage} />
               <Route path="/movies/watchlist" component= {WatchListMoviePage}/>
               <Route exact path="/reviews/form" component={AddMovieReviewPage} />
               <Route path="/reviews/:id" component={MovieReviewPage} />
@@ -50,7 +54,7 @@ const App = () => {
               <Route path="/movies/:id" component={MoviePage} />
               <Route path="/" component={HomePage} />
           <Redirect from="*" to="/" />
-        </Switch>
+        </Switch> 
         </GenresContextProvider>
         </MoviesContextProvider>
       </div>
