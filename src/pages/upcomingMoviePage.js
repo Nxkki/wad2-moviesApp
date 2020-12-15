@@ -14,7 +14,7 @@ const UpcomingMovieListPage = () => {
       title="Upcoming Movies"
       movies={upcoming}  /* Changed */
       action={(movie) => {
-        return <AddToWatchListButton movie={movie} />;
+        return <AddToWatchListButton movie={upcoming} />;
       }}
     />
   );

@@ -14,6 +14,9 @@ import FavoriteMoviesPage from './pages/favoritesMoviesPage'       // NEW
 import UpcomingMoviePage from './pages/upcomingMoviePage'
 import WatchListMoviePage from './pages/watchListMoviePage'
 import TopRatedMoviesPage from './pages/TopRatedMoviesPage'
+import PopularMoviesPage from './pages/popularMoviesPage'
+
+
 // import TopRatedMoviesContextProvider from "./contexts/topRatedMoviesContext";
 // import topRatedMoviesPage from "./pages/topRatedMoviesPage";
 // //m3p5
@@ -45,6 +48,7 @@ const App = () => {
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>
            <Switch> 
+             <Route path="/movies/popular" component={PopularMoviesPage} />
               <Route path="/movies/watchlist" component= {WatchListMoviePage}/>
               <Route path="/movies/topRated" component={TopRatedMoviesPage} />
               <Route exact path="/reviews/form" component={AddMovieReviewPage} />
