@@ -12,6 +12,7 @@ import MoviePage from './pages/movieDetailsPage'
 import { BrowserRouter, Route, Redirect, Switch, Link } from "react-router-dom"    // CHANGED
 import FavoriteMoviesPage from './pages/favoritesMoviesPage'       // NEW
 import UpcomingMoviePage from './pages/upcomingMoviePage'
+import WatchListMoviePage from './pages/watchListMoviePage'
 //m3p5
 // const App = () => {
 //   return (
@@ -40,13 +41,14 @@ const App = () => {
           <div className="container-fluid">
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>
-           <Switch>
-          <Route exact path="/reviews/form" component={AddMovieReviewPage} />
-          <Route path="/reviews/:id" component={MovieReviewPage} />
-          <Route exact path="/movies/upcoming" component={UpcomingMoviePage}/>     
-          <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
-          <Route path="/movies/:id" component={MoviePage} />
-          <Route path="/" component={HomePage} />
+           <Switch> 
+              <Route path="/movies/watchlist" component= {WatchListMoviePage}/>
+              <Route exact path="/reviews/form" component={AddMovieReviewPage} />
+              <Route path="/reviews/:id" component={MovieReviewPage} />
+              <Route exact path="/movies/upcoming" component={UpcomingMoviePage}/>     
+              <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
+              <Route path="/movies/:id" component={MoviePage} />
+              <Route path="/" component={HomePage} />
           <Redirect from="*" to="/" />
         </Switch>
         </GenresContextProvider>
