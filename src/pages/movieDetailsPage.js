@@ -7,7 +7,6 @@ import useMovie from "../hooks/useMovie";
 import SimilarMovies from "../components/movieSimilar/index.js"
 import Recommendations from "../components/movieRecommendations/index.js"
 
-
 //mp3p4
 // import { Link, Route, withRouter } from "react-router-dom"
 // import MovieReviews from "../components/movieReviews"
@@ -56,8 +55,10 @@ const MoviePage = props => {
           path={`/movies/:id/reviews`}
           render={props => <MovieReviews movie={movie} {...props} />}
         />
+         
         <SimilarMovies movie={movie} />
         <Recommendations movie={movie} />
+        
       </>
     ) : (
       <p>Waiting for movie details</p>
