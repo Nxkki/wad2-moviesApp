@@ -50,15 +50,54 @@ const MoviePage = props => {
               </Link>
             )}
           </div>
+          <div className="col-12 ">
+            {!props.history.location.pathname.endsWith("/similarMovies") ? (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/movies/${id}/similarMovies`}
+              >
+                Show similar Movie 
+              </Link>
+            ) : (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/movies/${id}`}
+              >
+                Hide similar Movie
+              </Link>
+            )}
+          </div>
+          <div className="col-12 ">
+            {!props.history.location.pathname.endsWith("/recommendedMovies") ? (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/movies/${id}/recommendedMovies`}
+              >
+                Show Recommended Movies 
+              </Link>
+            ) : (
+              <Link
+                className="btn btn-primary btn-block active"
+                to={`/movies/${id}`}
+              >
+                Hide Recommended Movies
+              </Link>
+            )}
+          </div>
         </div>
         <Route
           path={`/movies/:id/reviews`}
           render={props => <MovieReviews movie={movie} {...props} />}
         />
+        <Route
+          path={`/movies/:id/similarMovies`}
+          render={props => <SimilarMovies movie={movie} {...props} />}
+        />
          
-        <SimilarMovies movie={movie} />
-        <Recommendations movie={movie} />
-        
+         <Route
+          path={`/movies/:id/recommendedMovies`}
+          render={props => <Recommendations movie={movie} {...props} />}
+        />
       </>
     ) : (
       <p>Waiting for movie details</p>
