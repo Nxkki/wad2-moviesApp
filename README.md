@@ -37,6 +37,7 @@ Name: Nikki Osita
 + Popular movie-Lists all popular movies returned by the TMDB API
 + Similar Movies- Lists the similar movies belonging to a particular movie, links formed using keywords and genres.
 + Recommended movies - lists all recomended movies for a movie. 
++ Click Login to log in
 
 
 ## Setup requirements (If required).
@@ -70,10 +71,15 @@ after downloading add personal .env file
 
 
 ![][watchListLink]
+images for README\login.png
+images for README\first three showing.png
+images for README\first three gone.png
 \images for README\watchlist add a review button.png
 \images for README\review form.png
-> Clicking watckList in the header causes the display of the movies stored in watch list array that was added to upcoming.
+> Clicking watckList in the header causes log in page to appear, log in must be clicked before watchlist page appears.
+> Watchlist page displays the movies stored in watch list array that was added to upcoming.
 > When movie cards in watchList displays an add review button is also an option (good for cases where its a rewatch).
+> Any movie added to watchList before login will be stored and displayed after log in.
 
 ![][topRatedcardLink]
 images for README\toprated.png
@@ -95,13 +101,16 @@ images for README\show recommendation.png
 images for README\popular movies.png
 > Clicking a card causes the display of that movie's details.
 
+![][LoginLink]
+images for README\login.png
+> Click log in to have access to favourites and watchlist
 ## Routing.
 
 ...... Insert a list of the additional routes supported by your Movies Fan app. If relevant, specify which of the routes require authentication, i.e. protected/private.
 
-+ /movies/favorites  - displays the user's favorite movies selection.
++ /movies/favorites (private) - displays the user's favorite movies selection.
 + /reviews/:id - displays the full text of a movie review.
-+ + /movies/watchList - displays movie the user watchList group.
++ + /movies/watchList (private) - displays movie the user watchList group.
 + /movies/topRate  -displays top Rated movie
 + /movies/popular - displays popular movies
 + /similarMovies/:id  - displays the cards that are similar movies.
@@ -132,6 +141,9 @@ images for README\show recommendation(hyperlink).png
 images for README\popular movies(hyperlink).png
 > Clicking a card causes the display of that movie's details.
 
+![][LoginLink]
+images for README\login.png
+> Click log in to have access to favourites and watchlist
 ## Independent learning (If relevant).
 
 . . . . . Briefly mention each technologies/techniques used in your project codebase that were not covered in the lectures/labs. Provide source code filename references to support your assertions and include reference material links (articles/blogs).
@@ -144,7 +156,10 @@ images for README\popular movies(hyperlink).png
 [reviewLink]: ./public/reviewLink.png
 [cardLink]: ./public/cardLink.png
 
-[watchListLink]: images for README\watchlist add a review button.png
+[watchListLink]: images for README\login.png
+                 images for README\first three showing.png
+                 images for README\first three gone.png
+                 images for README\watchlist add a review button.png
                  images for README\review form.png 
 
 [topRatedcardLink]: images for README\toprated.png
@@ -156,4 +171,5 @@ images for README\popular movies(hyperlink).png
                          images for README\show recommendation.png
 [PopulatedcardLink]: images for README\popular movies.png
 
+[LoginLink]: images for README\login.png
 

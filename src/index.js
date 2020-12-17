@@ -15,6 +15,10 @@ import UpcomingMoviePage from './pages/upcomingMoviePage'
 import WatchListMoviePage from './pages/watchListMoviePage'
 import TopRatedMoviesPage from './pages/TopRatedMoviesPage'
 import PopularMoviesPage from './pages/popularMoviesPage'
+import LoginPage from "./loginPage";
+import PrivateRoute from "./privateRoute";
+import AuthHeader from "./authHeader";
+import AuthProvider from "./authContext";
 
 
 // import TopRatedMoviesContextProvider from "./contexts/topRatedMoviesContext";
@@ -42,19 +46,22 @@ import PopularMoviesPage from './pages/popularMoviesPage'
 const App = () => {
   return (
       <BrowserRouter>
+      <AuthProvider>
+        <AuthHeader />
         <div className="jumbotron">
           <SiteHeader />      {/* New Header  */}
           <div className="container-fluid">
           <MoviesContextProvider>     {/* NEW  */}
           <GenresContextProvider>
            <Switch> 
+           <Route path="/login" component={LoginPage} />
              <Route path="/movies/popular" component={PopularMoviesPage} />
-              <Route path="/movies/watchlist" component= {WatchListMoviePage}/>
+              <PrivateRoute path="/movies/watchlist" component= {WatchListMoviePage}/>
               <Route path="/movies/topRated" component={TopRatedMoviesPage} />
               <Route exact path="/reviews/form" component={AddMovieReviewPage} />
               <Route path="/reviews/:id" component={MovieReviewPage} />
               <Route exact path="/movies/upcoming" component={UpcomingMoviePage}/>     
-              <Route exact path="/movies/favorites" component={FavoriteMoviesPage} />
+              <PrivateRoute exact path="/movies/favorites" component={FavoriteMoviesPage} />
               <Route path="/movies/:id" component={MoviePage} />
               <Route path="/" component={HomePage} />
           <Redirect from="*" to="/" />
@@ -63,6 +70,7 @@ const App = () => {
         </MoviesContextProvider>
       </div>
     </div>
+    </AuthProvider>
   </BrowserRouter>
   );
 };
